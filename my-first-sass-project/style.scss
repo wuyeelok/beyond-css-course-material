@@ -1,5 +1,9 @@
-$clr-primary: hotpink;
+$clr-primary: limegreen;
 
 body {
+  background: $clr-primary;
+}
+
+.primary-color {
   background: $clr-primary;
 }
