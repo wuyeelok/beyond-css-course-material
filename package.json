@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile_scss": "sass ./my-first-sass-project/style.scss ./my-first-sass-project/style.css"
+    "compile_scss": "sass --watch ./my-first-sass-project/style.scss ./my-first-sass-project/style.css"
   },
   "repository": {
     "type": "git",
