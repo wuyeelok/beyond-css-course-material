@@ -1,3 +1,4 @@
+// Primary color
 $clr-primary: limegreen;
 
 body {
@@ -8,6 +9,4 @@ body {
   background: $clr-primary;
 }
 
-// Only apprears in scss file
-
-/* Will show in css file */
+/* This comment will show in css file */
