@@ -10,4 +10,13 @@ body {
   background: $clr-primary;
 }
 
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
 /* This comment will show in css file */
