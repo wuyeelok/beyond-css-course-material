@@ -6,7 +6,8 @@
   "scripts": {
     "compile_scss": "sass --watch ./my-first-sass-project/style.scss ./my-first-sass-project/style.css",
     "local-live-server": "live-server --port=15870",
-    "start-dev": "npm-run-all --parallel local-live-server compile_scss"
+    "start-dev": "npm-run-all --parallel local-live-server compile_scss",
+    "compile_challenge_01_01_scss": "sass --watch ./challenges/01-nesting/01/sass/style.scss ./challenges/01-nesting/01/sass/style.css"
   },
   "repository": {
     "type": "git",
