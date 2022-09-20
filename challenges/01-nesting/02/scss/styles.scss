@@ -15,7 +15,42 @@ body {
 }
 
 .btn {
-  /* your code starts here */
+  //your code starts here
+  display: inline-block;
+  padding: 1em 2em;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
 
-  /* your code ends here */
+  &__primary {
+    background: #3f637d;
+
+    &:hover,
+    &:focus {
+      background: #2b4355;
+    }
+  }
+
+  &__secondary {
+    background: #4c4171;
+
+    &:hover,
+    &:focus {
+      background: #2b2541;
+    }
+  }
+
+  &__accent {
+    background: #efca5d;
+
+    &:hover,
+    &:focus {
+      background: #d1a215;
+    }
+  }
+  // your code ends here
 }
