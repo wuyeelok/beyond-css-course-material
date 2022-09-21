@@ -1,0 +1,69 @@
+body {
+  margin: 4rem 0 0;
+  font-size: 1.25rem;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+section {
+  padding-block: 3rem;
+}
+
+.container {
+  width: min(100% - 4rem, 50rem);
+  margin-inline: auto;
+}
+
+.surface-primary {
+  background: hsl(206deg, 33%, 37%);
+  color: white;
+}
+
+.surface-secondary {
+  background: hsl(253deg, 27%, 35%);
+  color: white;
+}
+
+.surface-accent {
+  background: hsl(45deg, 82%, 65%);
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.surface-primary .btn,
+.surface-secondary .btn {
+  background: white;
+  color: black;
+}
+.surface-accent .btn {
+  color: white;
+  background: black;
+}
+.btn:hover,
+.btn:focus {
+  background: inherit;
+  color: inherit;
+  outline: currentColor 2px solid;
+}
+
+.text-subdued {
+  font-size: 1rem;
+}
+.surface-primary .text-subdued {
+  opacity: 0.8;
+}
+.surface-secondary .text-subdued {
+  opacity: 0.7;
+}
+.surface-accent .text-subdued {
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=styles.css.map */
