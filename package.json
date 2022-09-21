@@ -8,7 +8,8 @@
     "local-live-server": "live-server --port=15870",
     "start-dev": "npm-run-all --parallel local-live-server compile_scss",
     "compile_challenge_01_01_scss": "sass --watch ./challenges/01-nesting/01/sass/style.scss ./challenges/01-nesting/01/sass/style.css",
-    "compile_challenge_01_02_scss": "sass --watch ./challenges/01-nesting/02/scss/styles.scss ./challenges/01-nesting/02/css/styles.css"
+    "compile_challenge_01_02_scss": "sass --watch ./challenges/01-nesting/02/scss/styles.scss ./challenges/01-nesting/02/css/styles.css",
+    "compile_challenge_01_03_scss": "sass --watch ./challenges/01-nesting/03/scss/styles.scss ./challenges/01-nesting/03/css/styles.css"
   },
   "repository": {
     "type": "git",
