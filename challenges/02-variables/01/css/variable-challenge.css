@@ -20,7 +20,7 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
-  box-shadow: 3px 3px #201e1f, -3px -3px #201e1f;
+  box-shadow: 0 0 2rem #201e1f;
 }
 .card__title {
   color: #da3f0b;
@@ -30,22 +30,20 @@ body {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
-  border: 1px solid #da3f0b;
-}
-.btn:hover, .btn:focus {
-  background-color: #201e1f;
-  box-shadow: 3px 3px #da3f0b, -3px -3px #da3f0b;
+  border: 3px solid #da3f0b;
 }
 .btn--primary {
-  background-color: #da3f0b;
   color: #f8f7f7;
+  background-color: #da3f0b;
 }
 .btn--outline {
-  background-color: #f8f7f7;
   color: #da3f0b;
+  background-color: #f8f7f7;
 }
-.btn--outline:hover {
+.btn:hover, .btn:focus {
   color: #f8f7f7;
+  background-color: #201e1f;
+  box-shadow: 0 0 1rem #da3f0b;
 }
 
 .flex-group {
