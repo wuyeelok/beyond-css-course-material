@@ -1,6 +1,6 @@
-$white: #f8f7f7;
-$black: #201e1f;
-$red: #da3f0b;
+$clr-white: #f8f7f7;
+$clr-black: #201e1f;
+$clr-red: #da3f0b;
 
 * {
   box-sizing: border-box;
@@ -8,8 +8,8 @@ $red: #da3f0b;
 }
 
 body {
-  background-color: $white;
-  color: $black;
+  background-color: $clr-white;
+  color: $clr-black;
 
   font-size: 1.75rem;
   font-family: system-ui, sans-serif;
@@ -26,11 +26,10 @@ body {
   gap: 0.75em;
   width: min(90%, 60rem);
   padding: 2em;
-
-  box-shadow: 3px 3px $black, -3px -3px $black;
+  box-shadow: 0 0 2rem $clr-black;
 
   &__title {
-    color: $red;
+    color: $clr-red;
   }
 }
 
@@ -38,27 +37,23 @@ body {
   display: inline-block;
   padding: 0.5em 1.5em;
   text-decoration: none;
-
-  border: 1px solid $red;
-
-  &:hover,
-  &:focus {
-    background-color: $black;
-    box-shadow: 3px 3px $red, -3px -3px $red;
-  }
+  border: 3px solid $clr-red;
 
   &--primary {
-    background-color: $red;
-    color: $white;
+    color: $clr-white;
+    background-color: $clr-red;
   }
 
   &--outline {
-    background-color: $white;
-    color: $red;
+    color: $clr-red;
+    background-color: $clr-white;
+  }
 
-    &:hover {
-      color: $white;
-    }
+  &:hover,
+  &:focus {
+    color: $clr-white;
+    background-color: $clr-black;
+    box-shadow: 0 0 1rem $clr-red;
   }
 }
 
