@@ -1,8 +1,8 @@
 {
   "name": "beyond-css-course-material",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Beyond CSS Module 1 Practice Project",
+  "main": "./sass-pricing/public/index.html",
   "scripts": {
     "compile_scss": "sass --watch ./my-first-sass-project/style.scss ./my-first-sass-project/style.css",
     "local-live-server": "live-server --port=15870",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/wuyeelok/beyond-css-course-material.git"
   },
-  "author": "",
+  "author": "Kenneth WU",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/wuyeelok/beyond-css-course-material/issues"
