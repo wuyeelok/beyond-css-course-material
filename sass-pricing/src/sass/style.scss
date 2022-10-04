@@ -38,6 +38,19 @@ $size-36: 2.25rem;
   font: inherit;
 }
 
+// Base styles
 body {
-  background-color: pink;
+  font: {
+    size: $fs-400;
+    weight: $fw-400;
+    family: $ff-sans;
+  }
+
+  color: $color-neutral-900;
+
+  background: {
+    color: $color-neutral-100;
+  }
+
+  text-align: center;
 }
