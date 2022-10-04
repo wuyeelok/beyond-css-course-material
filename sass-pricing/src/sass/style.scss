@@ -25,6 +25,19 @@ $size-20: 1.25rem;
 $size-32: 2rem;
 $size-36: 2.25rem;
 
+// Simple reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
 body {
   background-color: pink;
 }
