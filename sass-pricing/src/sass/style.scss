@@ -59,3 +59,9 @@ body {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
 }
+
+.page-title {
+  color: $color-neutral-900;
+  font-size: $fs-900;
+  margin-block: $size-32;
+}
