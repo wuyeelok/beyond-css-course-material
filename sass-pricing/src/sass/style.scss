@@ -65,3 +65,16 @@ body {
   font-size: $fs-900;
   margin-block: $size-32;
 }
+
+.pricing-plans {
+  border: $size-8 solid $color-primary-400;
+  display: flex;
+}
+
+.tier {
+  flex: 1;
+
+  &__feature-list {
+    list-style: none;
+  }
+}
