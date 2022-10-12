@@ -73,6 +73,16 @@ body {
 
 .tier {
   flex: 1;
+  padding: $size-36;
+
+  display: grid;
+  gap: $size-20;
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: $fw-700;
+    color: $color-primary-400;
+  }
 
   &__feature-list {
     list-style: none;
