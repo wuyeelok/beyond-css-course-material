@@ -89,10 +89,11 @@ body {
   }
 
   &__list-item {
-    &::after {
+    &:not(:last-child)::after {
       content: "";
       display: block;
       height: 1px;
+      margin-block: $size-20;
       background-color: $color-neutral-900;
       opacity: 0.2;
     }
