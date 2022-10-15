@@ -87,4 +87,14 @@ body {
   &__feature-list {
     list-style: none;
   }
+
+  &__list-item {
+    &::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: $color-neutral-900;
+      opacity: 0.2;
+    }
+  }
 }
