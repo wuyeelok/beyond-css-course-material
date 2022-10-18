@@ -98,4 +98,14 @@ body {
       opacity: 0.2;
     }
   }
+
+  &__price {
+    font-size: $fs-800;
+    font-weight: $fw-700;
+
+    span {
+      font-weight: $fw-400;
+      font-size: $fs-600;
+    }
+  }
 }
