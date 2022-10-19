@@ -134,4 +134,9 @@ body {
     background: $color-neutral-100;
     color: $color-primary-400;
   }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color: $color-neutral-900, $alpha: 0.7);
+  }
 }
