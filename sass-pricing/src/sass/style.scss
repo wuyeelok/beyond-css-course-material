@@ -109,3 +109,15 @@ body {
     }
   }
 }
+
+.button {
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: $fw-700;
+  color: $color-neutral-100;
+  background-color: $color-primary-400;
+  padding: 1em 1.5em;
+
+  justify-self: center;
+}
