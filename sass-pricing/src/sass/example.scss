@@ -1,0 +1,21 @@
+// Difference between extends and mixins
+
+%extend-bold-text {
+  font-weight: bold;
+}
+
+@mixin mixin-uppercase-text {
+  text-transform: uppercase;
+}
+
+.accent-text {
+  font-size: 1.175rem;
+  @extend %extend-bold-text;
+  @include mixin-uppercase-text();
+}
+
+.in-your-face-text {
+  font-size: 4rem;
+  @extend %extend-bold-text;
+  @include mixin-uppercase-text();
+}
