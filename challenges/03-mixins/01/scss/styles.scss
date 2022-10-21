@@ -13,6 +13,24 @@
   }
 }
 
+@mixin ui-element(
+  $size,
+  $color,
+  $bg-color,
+  $hover-color: $bg-color,
+  $hover-bg-color: $color
+) {
+  padding: $size ($size * 3);
+  color: $color;
+  background-color: $bg-color;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+}
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -39,4 +57,20 @@ body {
 
 .section-three {
   @include part-1-gradients($deg: 0deg, $clr1: orange, $clr2: yellow);
+}
+
+.button-one {
+  @include ui-element(0.5em, white, black);
+}
+
+.button-two {
+  @include ui-element(1em, yellow, #3b0f0f);
+}
+
+.badge-one {
+  @include ui-element(0.5em, black, white, black, white);
+}
+
+.badge-two {
+  @include ui-element(0.25em, #006eff, #0f0f1d, #0f0f1d, #006eff);
 }
