@@ -17,8 +17,8 @@
   $size,
   $color,
   $bg-color,
-  $hover-color: $bg-color,
-  $hover-bg-color: $color
+  $hover-color: $color,
+  $hover-bg-color: $bg-color
 ) {
   padding: $size ($size * 3);
   color: $color;
@@ -60,17 +60,17 @@ body {
 }
 
 .button-one {
-  @include ui-element(0.5em, white, black);
+  @include ui-element(0.5em, white, black, black, white);
 }
 
 .button-two {
-  @include ui-element(1em, yellow, #3b0f0f);
+  @include ui-element(1em, yellow, #3b0f0f, #3b0f0f, yellow);
 }
 
 .badge-one {
-  @include ui-element(0.5em, black, white, black, white);
+  @include ui-element(0.5em, black, white);
 }
 
 .badge-two {
-  @include ui-element(0.25em, #006eff, #0f0f1d, #0f0f1d, #006eff);
+  @include ui-element(0.25em, #006eff, #0f0f1d);
 }
