@@ -19,3 +19,18 @@
   @extend %extend-bold-text;
   @include mixin-uppercase-text();
 }
+
+// mixns argument example
+
+@mixin button($bg, $color) {
+  background: $bg;
+  color: $color;
+}
+
+.btn--accent {
+  @include button(limegreen, black);
+}
+
+.btn--inverted {
+  @include button(#000, limegreen);
+}
