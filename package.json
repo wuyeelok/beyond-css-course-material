@@ -23,7 +23,11 @@
     "sass-pricing:serve": "browser-sync start --server ./sass-pricing/public --files ./sass-pricing/public --port 16479",
     "sass-pricing:start": "npm-run-all sass-pricing:copy --parallel sass-pricing:watch sass-pricing:serve",
     "sass-pricing:build": "npm-run-all sass-pricing:copy:* sass-pricing:build:* sass-pricing:postbuild",
-    "sass-pricing:postbuild": "postcss ./sass-pricing/public/css/*.css -u autoprefixer cssnano -r --no-map"
+    "sass-pricing:postbuild": "postcss ./sass-pricing/public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "mixins_challege:watch:sass": "sass --watch ./challenges/03-mixins/01/scss:./challenges/03-mixins/01/css",
+    "mixins_challege:watch": "npm-run-all --parallel mixins_challege:watch:*",
+    "mixins_challege:serve": "browser-sync start --server ./challenges/03-mixins/01/  --files ./challenges/03-mixins/01/ --port 14754",
+    "mixins_challege:start": "npm-run-all --parallel mixins_challege:watch mixins_challege:serve"
   },
   "repository": {
     "type": "git",

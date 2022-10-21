@@ -3,3 +3,4 @@ node_modules/
 .cache/
 dist/
 sass-pricing/public/
+challenges/03-mixins/01/css/
