@@ -39,3 +39,17 @@
 .btn--haha {
   @include button($color: red, $bg: brown);
 }
+
+// default value for argument
+@mixin linear-gradient($deg: -45deg, $clr-1: red, $clr-2: blue) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+.hero {
+  padding: max(10vh, 5rem);
+  @include linear-gradient;
+}
+
+.call-to-action {
+  @include linear-gradient($clr-2: yellow);
+}
