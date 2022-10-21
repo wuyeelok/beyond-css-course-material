@@ -34,3 +34,8 @@
 .btn--inverted {
   @include button(#000, limegreen);
 }
+
+// You can change the order of matching argument
+.btn--haha {
+  @include button($color: red, $bg: brown);
+}
