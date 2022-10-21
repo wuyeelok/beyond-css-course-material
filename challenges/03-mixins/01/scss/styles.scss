@@ -36,15 +36,15 @@ body {
   margin: 0;
 }
 
-.title {
-  @include pseudo-underline(5rem, 1px, black, 2rem auto);
-}
-
 .section-one,
 .section-two,
 .section-three {
   text-align: center;
   padding: 10vh 0;
+}
+
+.title {
+  @include pseudo-underline(5rem, 1px, black, 2rem auto);
 }
 
 .section-one {
