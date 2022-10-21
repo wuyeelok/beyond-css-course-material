@@ -2,9 +2,24 @@
   background-image: linear-gradient($deg, $clr1, $clr2);
 }
 
+@mixin pseudo-underline($width, $height, $background-color, $margin) {
+  &::after {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+    margin: $margin;
+  }
+}
+
 body {
   font-family: system-ui;
   margin: 0;
+}
+
+.title {
+  @include pseudo-underline(5rem, 1px, black, 2rem auto);
 }
 
 .section-one,
