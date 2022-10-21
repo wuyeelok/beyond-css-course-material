@@ -31,6 +31,9 @@
   }
 }
 
+$clr-text-primary: white;
+$dis-inline-block: inline-block;
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -49,10 +52,12 @@ body {
 
 .section-one {
   @include gradients(45deg, red, blue);
+  color: $clr-text-primary;
 }
 
 .section-two {
   @include gradients($deg: -72deg, $clr1: purple, $clr2: limegreen);
+  color: $clr-text-primary;
 }
 
 .section-three {
@@ -60,17 +65,21 @@ body {
 }
 
 .button-one {
+  display: $dis-inline-block;
   @include ui-element(0.5em, white, black, black, white);
 }
 
 .button-two {
+  display: $dis-inline-block;
   @include ui-element(1em, yellow, #3b0f0f, #3b0f0f, yellow);
 }
 
 .badge-one {
+  display: $dis-inline-block;
   @include ui-element(0.5em, black, white);
 }
 
 .badge-two {
+  display: $dis-inline-block;
   @include ui-element(0.25em, #006eff, #0f0f1d);
 }
