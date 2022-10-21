@@ -1,3 +1,7 @@
+@mixin part-1-gradients($clr1: white, $clr2: black, $deg: 30deg) {
+  background-image: linear-gradient($deg, $clr1, $clr2);
+}
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -8,4 +12,16 @@ body {
 .section-three {
   text-align: center;
   padding: 10vh 0;
+}
+
+.section-one {
+  @include part-1-gradients(red, blue, 45deg);
+}
+
+.section-two {
+  @include part-1-gradients($deg: -72deg, $clr1: purple, $clr2: limegreen);
+}
+
+.section-three {
+  @include part-1-gradients($deg: 0deg, $clr1: orange, $clr2: yellow);
 }
