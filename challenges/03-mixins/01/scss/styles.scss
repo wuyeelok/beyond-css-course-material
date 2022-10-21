@@ -1,4 +1,4 @@
-@mixin part-1-gradients($clr1: white, $clr2: black, $deg: 30deg) {
+@mixin gradients($deg: 30deg, $clr1: white, $clr2: black) {
   background-image: linear-gradient($deg, $clr1, $clr2);
 }
 
@@ -48,15 +48,15 @@ body {
 }
 
 .section-one {
-  @include part-1-gradients(red, blue, 45deg);
+  @include gradients(45deg, red, blue);
 }
 
 .section-two {
-  @include part-1-gradients($deg: -72deg, $clr1: purple, $clr2: limegreen);
+  @include gradients($deg: -72deg, $clr1: purple, $clr2: limegreen);
 }
 
 .section-three {
-  @include part-1-gradients($deg: 0deg, $clr1: orange, $clr2: yellow);
+  @include gradients($deg: 0deg, $clr1: orange, $clr2: yellow);
 }
 
 .button-one {
