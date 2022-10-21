@@ -9,7 +9,7 @@
     width: $width;
     height: $height;
     background-color: $background-color;
-    margin: $margin;
+    margin: $margin auto;
   }
 }
 
@@ -44,7 +44,7 @@ body {
 }
 
 .title {
-  @include pseudo-underline(5rem, 1px, black, 2rem auto);
+  @include pseudo-underline(5rem, 1px, black, 2rem);
 }
 
 .section-one {
