@@ -83,3 +83,10 @@ body {
   display: $dis-inline-block;
   @include ui-element(0.25em, #006eff, #0f0f1d);
 }
+
+// interpolation example
+$color-pink: pink;
+
+.text-#{$color-pink} {
+  color: $color-pink;
+}
