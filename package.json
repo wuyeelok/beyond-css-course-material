@@ -27,7 +27,19 @@
     "mixins_challege:watch:sass": "sass --watch ./challenges/03-mixins/01/scss:./challenges/03-mixins/01/css",
     "mixins_challege:watch": "npm-run-all --parallel mixins_challege:watch:*",
     "mixins_challege:serve": "browser-sync start --server ./challenges/03-mixins/01/  --files ./challenges/03-mixins/01/ --port 14754",
-    "mixins_challege:start": "npm-run-all --parallel mixins_challege:watch mixins_challege:serve"
+    "mixins_challege:start": "npm-run-all --parallel mixins_challege:watch mixins_challege:serve",
+    "t-shirts:build:sass": "sass --no-source-map ./t-shirts/src/sass:./t-shirts/public/css",
+    "t-shirts:copy:assets": "copyfiles -u 2 ./t-shirts/src/assets/**/* ./t-shirts/public",
+    "t-shirts:copy:html": "copyfiles -u 2 ./t-shirts/src/*.html ./t-shirts/public",
+    "t-shirts:copy": "npm-run-all --parallel t-shirts:copy:*",
+    "t-shirts:watch:assets": "onchange ./t-shirts/src/assets/**/* -- npm run t-shirts:copy:assets",
+    "t-shirts:watch:html": "onchange ./t-shirts/src/*.html -- npm run t-shirts:copy:html",
+    "t-shirts:watch:sass": "sass --watch ./t-shirts/src/sass:./t-shirts/public/css",
+    "t-shirts:watch": "npm-run-all --parallel t-shirts:watch:*",
+    "t-shirts:serve": "browser-sync start --server ./t-shirts/public --files ./t-shirts/public --port 17321",
+    "t-shirts:start": "npm-run-all t-shirts:copy --parallel t-shirts:watch t-shirts:serve",
+    "t-shirts:build": "npm-run-all t-shirts:copy:* t-shirts:build:* t-shirts:postbuild",
+    "t-shirts:postbuild": "postcss ./t-shirts/public/css/*.css -u autoprefixer cssnano -r --no-map"
   },
   "repository": {
     "type": "git",
