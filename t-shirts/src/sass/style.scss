@@ -1,0 +1,40 @@
+// Font
+$font-roboto: roboto;
+
+$font-regular: 400;
+$font-bold: 700;
+$font-black: 900;
+
+$font-size-400: 1.125rem;
+$font-size-500: 1.25rem;
+$font-size-600: 2rem;
+$font-size-700: 3rem;
+
+// Color
+$clr-red-400: hsla(357, 100%, 68%, 1);
+$clr-red-500: hsl(357, 74%, 40%);
+$clr-blue-800: hsla(216, 71%, 16%, 1);
+$clr-neutral-100: hsl(0 0% 100%);
+
+// Size
+$size-8: 0.5rem;
+$size-16: 1rem;
+$size-32: 2rem;
+$size-36: 3rem;
+
+// Shadows
+%shadow {
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 0.15);
+}
+
+@mixin interative-scale($color, $bg, $scale: 1.05) {
+  transform: scale(1);
+  transition: transform 350ms ease;
+
+  &:hover,
+  &:focus {
+    transform: scale($scale);
+    color: $color;
+    background-color: $bg;
+  }
+}
