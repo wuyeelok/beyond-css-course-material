@@ -1,20 +1,20 @@
 // Font
-$font-roboto: roboto;
+$font-family: "Roboto", sans-serif;
 
-$font-regular: 400;
-$font-bold: 700;
-$font-black: 900;
+$fw-400: 400;
+$fw-700: 700;
+$fw-900: 900;
 
-$font-size-400: 1.125rem;
-$font-size-500: 1.25rem;
-$font-size-600: 2rem;
-$font-size-700: 3rem;
+$fs-400: 1.125rem;
+$fs-500: 1.25rem;
+$fs-600: 2rem;
+$fs-700: 3rem;
 
 // Color
-$clr-red-400: hsla(357, 100%, 68%, 1);
-$clr-red-500: hsl(357, 74%, 40%);
-$clr-blue-800: hsla(216, 71%, 16%, 1);
-$clr-neutral-100: hsl(0 0% 100%);
+$red-400: hsla(357, 100%, 68%, 1);
+$red-500: hsl(357, 74%, 40%);
+$blue-800: hsla(216, 71%, 16%, 1);
+$neutral-100: hsl(0 0% 100%);
 
 // Size
 $size-8: 0.5rem;
@@ -22,10 +22,14 @@ $size-16: 1rem;
 $size-32: 2rem;
 $size-36: 3rem;
 
+// Placeholders
+
 // Shadows
 %shadow {
   box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 0.15);
 }
+
+// Mixins
 
 @mixin interative-scale($color, $bg, $scale: 1.05) {
   transform: scale(1);
