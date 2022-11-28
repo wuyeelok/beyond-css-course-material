@@ -42,3 +42,22 @@ $size-36: 3rem;
     background-color: $bg;
   }
 }
+
+// reset -- start
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+// reset -- end
