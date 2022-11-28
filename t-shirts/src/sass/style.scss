@@ -72,3 +72,9 @@ body {
   margin: $size-36 0;
 }
 // Base style -- end
+
+// Compoisition
+.container {
+  width: min(58rem, 100% - 2rem);
+  margin-inline: auto;
+}
