@@ -61,3 +61,14 @@ img {
   max-width: 100%;
 }
 // reset -- end
+
+// Base style -- start
+body {
+  font-family: $font-family;
+  font-size: $fs-400;
+  color: $blue-800;
+
+  // for demo purposes
+  margin: $size-36 0;
+}
+// Base style -- end
