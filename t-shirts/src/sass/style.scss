@@ -73,7 +73,7 @@ body {
 }
 // Base style -- end
 
-// Compoisition
+// Compoisition -- start
 .container {
   width: min(58rem, 100% - 2rem);
   margin-inline: auto;
@@ -85,3 +85,25 @@ body {
   grid-auto-columns: 1fr;
   gap: var(--gap, $size-16);
 }
+// Compoisition -- end
+
+// Utilities -- start
+.margin-block-xl {
+  margin-block: $size-36;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+.fw-black {
+  font-weight: 900;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-accent {
+  color: $red-400;
+}
+
+// Utilities -- end
