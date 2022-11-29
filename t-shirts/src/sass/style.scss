@@ -132,6 +132,8 @@ body {
   @extend %shadow;
 
   &[data-type="product"] {
+    position: relative;
+
     h2 {
       font-size: $fs-600;
       font-weight: 900;
@@ -159,4 +161,10 @@ body {
   border-radius: 100vw;
   @extend %shadow;
   @include interative-scale($neutral-100, $red-500);
+
+  .card & {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+  }
 }
