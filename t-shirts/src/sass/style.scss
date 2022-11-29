@@ -158,6 +158,8 @@ body {
   }
 
   &[data-type="link-with-image"] {
+    @include interative-scale($neutral-100, $blue-800);
+
     text-decoration: none;
     color: $red-500;
     #{$parent} {
