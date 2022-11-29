@@ -121,3 +121,10 @@ body {
   font-weight: 900;
 }
 // Utilities -- end
+
+.card {
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: $neutral-100;
+  @extend %shadow;
+}
