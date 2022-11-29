@@ -122,9 +122,24 @@ body {
 }
 // Utilities -- end
 
+// Block --start
 .card {
-  border-radius: 2rem;
+  $parent: &;
+
+  border-radius: $size-32;
   overflow: hidden;
   background-color: $neutral-100;
   @extend %shadow;
+
+  &[data-type="product"] {
+    h2 {
+      font-size: $fs-600;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    #{$parent}__content {
+      padding: $size-32 $size-16 $size-16;
+    }
+  }
 }
