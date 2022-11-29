@@ -155,6 +155,16 @@ body {
       transform: translateY(-50%);
     }
   }
+
+  &[data-type="link-with-image"] {
+    text-decoration: none;
+    color: $red-500;
+    #{$parent} {
+      &__content {
+        padding: $size-16 $size-8;
+      }
+    }
+  }
 }
 
 .button {
