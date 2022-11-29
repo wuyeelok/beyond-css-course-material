@@ -164,6 +164,13 @@ body {
         padding: $size-16 $size-8;
       }
     }
+
+    img {
+      height: 8.75rem;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
   }
 }
 
