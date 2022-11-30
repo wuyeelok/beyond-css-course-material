@@ -91,3 +91,26 @@ p {
 .text-centered {
   text-align: center;
 }
+
+:root {
+  --clr-primary: limegreen;
+}
+
+$clr-primary: limegreen;
+
+.custom-prop {
+  --clr-secondary: hotpink;
+}
+
+.sass-var {
+  $clr-seondary: hotpink;
+}
+
+.title {
+  color: $clr-primary;
+}
+
+.another-title {
+  color: var(--clr-primary);
+  --clr-primary: brown;
+}
