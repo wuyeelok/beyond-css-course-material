@@ -76,6 +76,10 @@ p {
   .text-centered & {
     margin-inline: auto;
   }
+
+  @media (min-width: 60rem) {
+    max-width: 80ch;
+  }
 }
 
 .text-centered {
