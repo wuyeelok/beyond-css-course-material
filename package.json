@@ -7,6 +7,7 @@
     "my-1st-sass:copy:html": "copyfiles --up 2 ./my-first-sass-project/src/*.html ./my-first-sass-project/public/",
     "my-1st-sass:watch:html": "onchange ./my-first-sass-project/src/*.html -- npm run my-1st-sass:copy:html",
     "my-1st-sass:watch:sass": "sass --watch ./my-first-sass-project/src/style.scss ./my-first-sass-project/public/style.css",
+    "my-1st-sass:watch": "npm-run-all --parallel my-1st-sass:watch:*",
     "compile_scss": "sass --watch ./my-first-sass-project/style.scss ./my-first-sass-project/style.css",
     "local-live-server": "live-server --port=15870",
     "start-dev": "npm-run-all --parallel local-live-server compile_scss",
