@@ -22,3 +22,49 @@
     }
   }
 }
+
+body {
+  margin: 4rem;
+  font-size: 1.25rem;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  text: {
+    decoration: none;
+    transform: uppercase;
+  }
+
+  &__primary {
+    background: #3f637d;
+
+    &:hover,
+    &:focus {
+      background: #2b4355;
+    }
+  }
+
+  &__secondary {
+    background: #4c4171;
+
+    &:hover,
+    &:focus {
+      background: #2b2541;
+    }
+  }
+
+  &__accent {
+    background: #efca5d;
+
+    &:hover,
+    &:focus {
+      background: #d1a215;
+    }
+  }
+}
