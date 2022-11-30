@@ -1,12 +1,18 @@
 // style.scss - this comment won't appear in css
 
+$red: rgba(197, 18, 18, 0.74);
+$clr-primary-text: $red;
+
+$green: rgba(83, 218, 83, 0.973);
+$clr-border: $green;
+
 .primary-article {
   padding: 3rem 1rem;
 
   & .title {
     font-size: 5rem;
     & span {
-      color: red;
+      color: $clr-primary-text;
     }
   }
 }
@@ -71,7 +77,7 @@ body {
 
 p {
   max-width: 60ch;
-  border: 1px solid green;
+  border: 1px solid $clr-border;
 
   .text-centered & {
     margin-inline: auto;
