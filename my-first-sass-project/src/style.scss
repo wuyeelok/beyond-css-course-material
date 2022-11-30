@@ -27,7 +27,7 @@ body {
   margin: 4rem;
   font-size: 1.25rem;
   font-family: system-ui, sans-serif;
-  text-align: center;
+  // text-align: center;
 }
 
 .btn {
@@ -67,4 +67,17 @@ body {
       background: #d1a215;
     }
   }
+}
+
+p {
+  max-width: 60ch;
+  border: 1px solid green;
+
+  .text-centered & {
+    margin-inline: auto;
+  }
+}
+
+.text-centered {
+  text-align: center;
 }
