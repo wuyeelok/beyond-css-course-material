@@ -2,6 +2,7 @@ node_modules/
 .DS_Store
 .cache/
 dist/
+my-first-sass-project/public
 sass-pricing/public/
 challenges/03-mixins/01/css/
 t-shirts/public/
