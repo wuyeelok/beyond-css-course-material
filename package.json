@@ -4,6 +4,7 @@
   "description": "Beyond CSS Module 1 Practice Project",
   "main": "./sass-pricing/public/index.html",
   "scripts": {
+    "my-1st-sass:copy:html": "copyfiles --up 2 ./my-first-sass-project/src/*.html ./my-first-sass-project/public/",
     "my-1st-sass:watch:sass": "sass --watch ./my-first-sass-project/src/style.scss ./my-first-sass-project/public/style.css",
     "compile_scss": "sass --watch ./my-first-sass-project/style.scss ./my-first-sass-project/style.css",
     "local-live-server": "live-server --port=15870",
