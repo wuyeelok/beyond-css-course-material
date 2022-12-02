@@ -1,0 +1,9 @@
+%hardcore {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.title {
+  color: limegreen;
+  @extend %hardcore;
+}
