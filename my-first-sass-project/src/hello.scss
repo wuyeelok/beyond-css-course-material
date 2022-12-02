@@ -24,3 +24,14 @@ nav a {
   @extend .link;
   text-transform: uppercase;
 }
+
+@mixin mini-text($fw: 100) {
+  text-transform: lowercase;
+  font-weight: $fw;
+  font-size: 0.75em;
+}
+
+.tiny {
+  color: burlywood;
+  @include mini-text(200);
+}
