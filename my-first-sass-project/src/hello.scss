@@ -7,3 +7,20 @@
   color: limegreen;
   @extend %hardcore;
 }
+
+.link {
+  color: #23fe2f;
+  &:hover,
+  &:focus {
+    color: #ef233f;
+  }
+}
+
+.cta .link {
+  font-weight: bold;
+}
+
+nav a {
+  @extend .link;
+  text-transform: uppercase;
+}
