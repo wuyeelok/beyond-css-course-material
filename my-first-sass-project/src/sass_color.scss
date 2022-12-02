@@ -1,1 +1,12 @@
 // For playing around sass build in color module
+@use "sass:color";
+
+$clr-accent: #23ef91;
+
+.bg-accent {
+  background-color: $clr-accent;
+}
+
+.bg-accent-light {
+  background-color: color.scale($clr-accent, $lightness: 50%);
+}
