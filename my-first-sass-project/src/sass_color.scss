@@ -10,3 +10,7 @@ $clr-accent: #23ef91;
 .bg-accent-light {
   background-color: color.scale($clr-accent, $lightness: 50%);
 }
+
+.bg-accent-dark {
+  background-color: color.scale($clr-accent, $lightness: -50%);
+}
