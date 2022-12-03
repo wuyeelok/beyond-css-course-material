@@ -3,6 +3,9 @@
 
 $clr-accent: #23ef91;
 
+$clr-primary: #234;
+$clr-neutral-100: rgb(231, 231, 222);
+
 .bg-accent {
   background-color: $clr-accent;
 }
@@ -13,4 +16,13 @@ $clr-accent: #23ef91;
 
 .bg-accent-dark {
   background-color: color.scale($clr-accent, $lightness: -50%);
+}
+
+.grayscaled {
+  color: color.grayscale($clr-neutral-100);
+  background: color.grayscale($clr-primary);
+}
+
+.mix-them-up {
+  color: color.mix($clr-accent, $clr-primary, 10%);
 }
