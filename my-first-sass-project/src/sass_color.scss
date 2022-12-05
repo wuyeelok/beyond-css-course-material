@@ -26,3 +26,16 @@ $clr-neutral-100: rgb(231, 231, 222);
 .mix-them-up {
   color: color.mix($clr-accent, $clr-primary, 10%);
 }
+
+// for loop exmaple
+@for $i from 1 to 4 {
+  .example-#{$i} {
+    width: 10px * $i;
+  }
+}
+
+@for $i from 1 through 4 {
+  .example2-#{$i} {
+    height: 10px * $i;
+  }
+}
