@@ -1,0 +1,12 @@
+@use "sass:color";
+
+$clr-light-blue: color.scale(blue, $lightness: 88%);
+$clr-dark-blue: color.scale(blue, $lightness: -45%);
+
+.col,
+[class*="col-"] {
+  padding: 0.5rem;
+  background: $clr-light-blue;
+  border: 1px solid $clr-dark-blue;
+  text-align: center;
+}
