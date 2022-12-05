@@ -3,10 +3,24 @@
 $clr-light-blue: color.scale(blue, $lightness: 88%);
 $clr-dark-blue: color.scale(blue, $lightness: -45%);
 
+$total-columns: 12;
+
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat($total-columns, 1fr);
+}
+
 .col,
 [class*="col-"] {
   padding: 0.5rem;
   background: $clr-light-blue;
   border: 1px solid $clr-dark-blue;
   text-align: center;
+}
+
+@for $col-count from 1 through $total-columns {
+  .col-#{$col-count} {
+    grid-column: span $col-count;
+  }
 }
