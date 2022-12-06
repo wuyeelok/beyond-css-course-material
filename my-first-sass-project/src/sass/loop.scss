@@ -19,8 +19,30 @@ $total-columns: 12;
   text-align: center;
 }
 
+[class*="col-"] {
+  grid-column: 1 / -1;
+}
+
 @for $col-count from 1 through $total-columns {
   .col-#{$col-count} {
     grid-column: span $col-count;
+  }
+
+  @media (min-width: 30em) {
+    .col-sm-#{$col-count} {
+      grid-column: span $col-count;
+    }
+  }
+
+  @media (min-width: 45em) {
+    .col-md-#{$col-count} {
+      grid-column: span $col-count;
+    }
+  }
+
+  @media (min-width: 65em) {
+    .col-lg-#{$col-count} {
+      grid-column: span $col-count;
+    }
   }
 }
