@@ -5,6 +5,9 @@ $clr-dark-blue: color.scale(blue, $lightness: -45%);
 
 $total-columns: 12;
 
+$clr-flame: rgb(245, 79, 79);
+$num-of-steps: 10;
+
 .container {
   display: grid;
   gap: 1rem;
@@ -44,5 +47,12 @@ $total-columns: 12;
     .col-lg-#{$col-count} {
       grid-column: span $col-count;
     }
+  }
+}
+
+// my flame color from light to dark
+@for $i from 0 to $num-of-steps {
+  .my-flame-#{$i + 1} {
+    color: color.scale($clr-flame, $lightness: $i * -10%);
   }
 }
