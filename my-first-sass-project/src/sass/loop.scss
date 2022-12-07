@@ -57,3 +57,10 @@ $num-of-steps: 10;
     color: color.scale($clr-flame, $lightness: $i * -10%);
   }
 }
+
+// each loop example
+@each $color in red, blue, green {
+  .clr-#{$color} {
+    color: $color;
+  }
+}
