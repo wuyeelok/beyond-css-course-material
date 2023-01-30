@@ -65,7 +65,18 @@ $num-of-steps: 10;
   }
 }
 
-// Challege -- start
+// @for Challege -- start
+$clr-primary: #2553db;
+$clr-steps: 10;
+
+@for $i from 0 through $clr-steps - 1 {
+  .clr-primary-#{$i + 1} {
+    color: color.scale($clr-primary, $lightness: 10% * $i);
+  }
+}
+// @for Challege -- end
+
+// @each Challege -- start
 $icons: mail, twitter, github;
 
 .icon {
@@ -79,4 +90,4 @@ $icons: mail, twitter, github;
     }
   }
 }
-// Challege -- end
+// @each Challege -- end
