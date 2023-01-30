@@ -64,3 +64,19 @@ $num-of-steps: 10;
     color: $color;
   }
 }
+
+// Challege -- start
+$icons: mail, twitter, github;
+
+.icon {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  background-size: contain;
+
+  @each $i in $icons {
+    &--#{$i} {
+      background-image: url("/images/#{$i}.svg");
+    }
+  }
+}
+// Challege -- end
