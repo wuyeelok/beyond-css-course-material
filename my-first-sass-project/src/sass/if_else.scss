@@ -17,6 +17,8 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
       // if color lightness less than 50%.
       // set color to white
       color: white;
+    } @else {
+      color: black;
     }
   }
 }
