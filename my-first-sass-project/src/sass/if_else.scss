@@ -1,5 +1,22 @@
-@if (1 >= 1 and 2 == 2) {
+@use "sass:color";
+
+$colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
+
+@if (1 < 2) {
   body {
     color: blue;
+  }
+}
+
+@each $name, $color in $colors {
+  .clr-#{$name} {
+    background: $color;
+
+    @debug "name: #{$name}, color lightness : #{color.lightness($color)}";
+    @if (color.lightness($color) < 50%) {
+      // if color lightness less than 50%.
+      // set color to white
+      color: white;
+    }
   }
 }
