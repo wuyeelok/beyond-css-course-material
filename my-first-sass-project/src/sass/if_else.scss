@@ -23,7 +23,7 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
   }
 }
 
-// This mixin could be handy, but it has one big limitation: it always sets the border on all 4 sides!
+// This mixin use case with if and else for setting side
 @mixin border($side: all, $color: #dedede, $width: 1px, $style: solid) {
   @if ($side == "all") {
     border: $color $width $style;
@@ -34,10 +34,10 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 
 // will set the border on all 4 sides
 .tag {
-  @include border();
+  @include border($side: left, $color: blue);
 }
 
 // will set the border only on the bottom
 .call-to-action {
-  @include border(bottom);
+  @include border($side: right, $width: 5px);
 }
