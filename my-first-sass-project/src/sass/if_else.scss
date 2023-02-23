@@ -34,10 +34,10 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 
 // will set the border on all 4 sides
 .tag {
-  @include border($side: left, $color: blue);
+  @include border($color: blue);
 }
 
 // will set the border only on the bottom
 .call-to-action {
-  @include border($side: right, $width: 5px);
+  @include border($side: bottom, $width: 5px);
 }
