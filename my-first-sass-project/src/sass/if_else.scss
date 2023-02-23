@@ -22,3 +22,22 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
     }
   }
 }
+
+// This mixin could be handy, but it has one big limitation: it always sets the border on all 4 sides!
+@mixin border($side: all, $color: #dedede, $width: 1px, $style: solid) {
+  @if ($side == "all") {
+    border: $color $width $style;
+  } @else {
+    border-#{$side}: $color $width $style;
+  }
+}
+
+// will set the border on all 4 sides
+.tag {
+  @include border();
+}
+
+// will set the border only on the bottom
+.call-to-action {
+  @include border(bottom);
+}
