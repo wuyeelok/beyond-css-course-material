@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @function sum($num1, $num2) {
   @return $num1 + $num2;
 }
@@ -10,7 +12,28 @@
   @return $total;
 }
 
+$colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
+
 body {
   font-size: sum(1rem, 0.125rem);
   width: sumV2(100px, 200px, 20px, 50px);
+}
+
+@function high-contrast($color) {
+  @if (color.lightness($color) < 50) {
+    @return white;
+  } @else {
+    @return black;
+  }
+}
+
+@mixin good-color-combo($color) {
+  background: $color;
+  color: high-contrast($color);
+}
+
+@each $name, $color in $colors {
+  .clr-#{$name} {
+    @include good-color-combo($color);
+  }
 }
