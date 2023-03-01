@@ -13,13 +13,10 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
     background: $color;
 
     @debug "name: #{$name}, color lightness : #{color.lightness($color)}";
-    @if (color.lightness($color) < 50%) {
-      // if color lightness less than 50%.
-      // set color to white
-      color: white;
-    } @else {
-      color: black;
-    }
+
+    // if color lightness less than 50%.
+    // set color to white
+    color: if(color.lightness($color) < 50%, white, black);
   }
 }
 
