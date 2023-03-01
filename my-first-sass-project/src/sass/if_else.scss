@@ -69,3 +69,32 @@ h1 {
 h2 {
   @include uppercase(4rem);
 }
+
+@mixin ui-component(
+  $size,
+  $color,
+  $bg,
+  $hover-color: $color,
+  $hover-bg: $bg,
+  $hover: true
+) {
+  display: inline-block;
+  padding: $size ($size * 3);
+  color: $color;
+  background-color: $bg;
+  @if $hover {
+    &:hover,
+    &:focus {
+      color: $hover-color;
+      background-color: $hover-bg;
+    }
+  }
+}
+
+.button {
+  @include ui-component(1em, white, black, black, white);
+}
+
+.testabc {
+  @include ui-component(1px, red, blue, $hover: false);
+}
