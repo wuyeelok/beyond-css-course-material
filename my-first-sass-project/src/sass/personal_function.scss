@@ -2,6 +2,15 @@
   @return $num1 + $num2;
 }
 
+@function sumV2($numbers...) {
+  $total: 0;
+  @each $i in $numbers {
+    $total: $total + $i;
+  }
+  @return $total;
+}
+
 body {
   font-size: sum(1rem, 0.125rem);
+  width: sumV2(100px, 200px, 20px, 50px);
 }
