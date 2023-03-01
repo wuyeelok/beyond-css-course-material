@@ -41,3 +41,22 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 .call-to-action {
   @include border($side: bottom, $width: 5px);
 }
+
+// Uppercase mini challege
+@mixin uppercase($font-size: 1rem, $text-transform: uppercase) {
+  text-transform: $text-transform;
+
+  @if ($font-size >= 2rem) {
+    line-height: 1.1;
+  } @else {
+    line-height: 1.3;
+  }
+}
+
+.section-title {
+  @include uppercase(2.23rem);
+}
+
+.small {
+  @include uppercase(0.875rem);
+}
