@@ -1,0 +1,7 @@
+@function sum($num1, $num2) {
+  @return $num1 + $num2;
+}
+
+body {
+  font-size: sum(1rem, 0.125rem);
+}
