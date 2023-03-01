@@ -70,19 +70,12 @@ h2 {
   @include uppercase(4rem);
 }
 
-@mixin ui-component(
-  $size,
-  $color,
-  $bg,
-  $hover-color: $color,
-  $hover-bg: $bg,
-  $hover: true
-) {
+@mixin ui-component($size, $color, $bg, $hover-color: $color, $hover-bg: $bg) {
   display: inline-block;
   padding: $size ($size * 3);
   color: $color;
   background-color: $bg;
-  @if $hover {
+  @if ($hover-color != $color or $hover-bg != $bg) {
     &:hover,
     &:focus {
       color: $hover-color;
@@ -96,5 +89,5 @@ h2 {
 }
 
 .testabc {
-  @include ui-component(1px, red, blue, $hover: false);
+  @include ui-component(1px, red, blue);
 }
