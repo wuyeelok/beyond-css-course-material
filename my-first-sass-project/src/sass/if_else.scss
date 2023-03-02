@@ -47,7 +47,7 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 
 // will set the border only on the bottom
 .call-to-action {
-  @include border($side: asdf, $width: 5px);
+  @include border($side: bottom, $width: 5px);
 }
 
 // Uppercase mini challege
