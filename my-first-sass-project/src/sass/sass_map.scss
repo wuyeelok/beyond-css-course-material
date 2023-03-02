@@ -1,4 +1,5 @@
 @use "sass:meta";
+@use "sass:map";
 
 // Don't forget quotation on keys
 // dont forget comma at the end
@@ -6,6 +7,13 @@ $colors: (
   "primary": red,
   "secondary": blue,
   "accent": yellow,
+  "special": orange,
 );
 
 @debug "type of $colors is #{meta.type-of($colors)}!";
+@debug 'primary value is #{map.get($colors, "primary")}!';
+@debug 'special value is #{map.get($colors, "special")}!';
+
+body {
+  font-size: map.get($colors, "secondary");
+}
