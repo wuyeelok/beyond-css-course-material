@@ -1,0 +1,11 @@
+@use "sass:meta";
+
+// Don't forget quotation on keys
+// dont forget comma at the end
+$colors: (
+  "primary": red,
+  "secondary": blue,
+  "accent": yellow,
+);
+
+@debug "type of $colors is #{meta.type-of($colors)}!";
