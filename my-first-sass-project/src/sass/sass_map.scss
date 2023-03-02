@@ -16,6 +16,15 @@ $font-size-map: (
   "small": 11px,
 );
 
+@function clr($color) {
+  $output-color: map.get($colors, $color);
+  @if ($output-color != null) {
+    @return $output-color;
+  } @else {
+    @error "You entered #{$color} which does not match!";
+  }
+}
+
 @debug "type of $colors is #{meta.type-of($colors)}!";
 @debug 'primary value is #{map.get($colors, "primary")}!';
 @debug 'special value is #{map.get($colors, "special")}!';
@@ -23,4 +32,8 @@ $font-size-map: (
 body {
   color: map.get($colors, "secondary");
   font-size: map.get($font-size-map, "small");
+}
+
+.example {
+  color: clr("accent");
 }
