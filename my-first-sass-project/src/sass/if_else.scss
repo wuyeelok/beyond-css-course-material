@@ -24,8 +24,19 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 @mixin border($side: all, $color: #dedede, $width: 1px, $style: solid) {
   @if ($side == "all") {
     border: $color $width $style;
-  } @else {
+  } @else if
+    $side ==
+    "top" or
+    $side ==
+    "bottom" or
+    $side ==
+    "right" or
+    $side ==
+    "left"
+  {
     border-#{$side}: $color $width $style;
+  } @else {
+    @error 'The side value must be either "all", top, bottom, right or left, you entered #{$side}';
   }
 }
 
@@ -36,7 +47,7 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
 
 // will set the border only on the bottom
 .call-to-action {
-  @include border($side: bottom, $width: 5px);
+  @include border($side: asdf, $width: 5px);
 }
 
 // Uppercase mini challege
