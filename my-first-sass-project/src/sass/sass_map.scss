@@ -10,10 +10,17 @@ $colors: (
   "special": orange,
 );
 
+$font-size-map: (
+  "large": 48px,
+  "normal": 16px,
+  "small": 11px,
+);
+
 @debug "type of $colors is #{meta.type-of($colors)}!";
 @debug 'primary value is #{map.get($colors, "primary")}!';
 @debug 'special value is #{map.get($colors, "special")}!';
 
 body {
-  font-size: map.get($colors, "secondary");
+  color: map.get($colors, "secondary");
+  font-size: map.get($font-size-map, "small");
 }
