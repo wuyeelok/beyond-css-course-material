@@ -1,0 +1,45 @@
+@use "sass:map";
+
+$breakpoints: (
+  small: 30em,
+  medium: 45em,
+  large: 65em,
+  xl: 80em,
+);
+
+// For this mixin to work, you will have to:
+//
+// First, check if the value is in the map, and if it is, we can use that. This is like what we saw in the previous lessons.
+// If it is NOT in the map, we want to check if the value is a number or not.
+// If it is a number, we can use that number.
+// And to step it up even more, when we check if that value is a number, we can also look to see if it’s unitless or not.
+// If it is a number, but has no unit, we can print an error saying what the issue is.
+// Otherwise, we can print an error saying that the value is not in the map, or a unit with a number.
+@mixin mq($size) {
+  $breakpoint: map.get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+body {
+  // all of these should work
+  @include mq(medium) {
+    background: pink;
+  }
+  @include mq(500px) {
+    background: lightblue;
+  }
+  @include mq(100em) {
+    background: #efefef;
+  }
+
+  // these should fail, with an error telling me why
+  @include mq(reallysmall) {
+    background: yellow;
+  }
+  @include mq(5000) {
+    background: purple;
+  }
+}
