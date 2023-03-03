@@ -73,9 +73,9 @@ $font-sizes: (
   }
 }
 
-@debug "type of $colors is #{meta.type-of($colors)}!";
-@debug 'primary value is #{map.get($colors, "primary")}!';
-@debug 'special value is #{map.get($colors, "special")}!';
+// @debug "type of $colors is #{meta.type-of($colors)}!";
+// @debug 'primary value is #{map.get($colors, "primary")}!';
+// @debug 'special value is #{map.get($colors, "special")}!';
 
 body {
   color: map.get($colors, "secondary");
@@ -123,6 +123,6 @@ body {
 
 .test-v3 {
   font-size: 2rem;
-  color: clr-v3(primary, dadrk);
+  color: clr-v3(primary, dark);
   background-color: clr-v3(accent);
 }

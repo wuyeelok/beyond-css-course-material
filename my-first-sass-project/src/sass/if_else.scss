@@ -12,7 +12,7 @@ $colors: (primary, #4287f5), (secondary, #3a128a), (accent, #f59c42);
   .clr-#{$name} {
     background: $color;
 
-    @debug "name: #{$name}, color lightness : #{color.lightness($color)}";
+    // @debug "name: #{$name}, color lightness : #{color.lightness($color)}";
 
     // if color lightness less than 50%.
     // set color to white
