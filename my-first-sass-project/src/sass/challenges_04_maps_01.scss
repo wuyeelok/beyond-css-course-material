@@ -1,4 +1,6 @@
 @use "sass:map";
+@use "sass:meta";
+@use "sass:math";
 
 $breakpoints: (
   small: 30em,
@@ -16,7 +18,19 @@ $breakpoints: (
 // If it is a number, but has no unit, we can print an error saying what the issue is.
 // Otherwise, we can print an error saying that the value is not in the map, or a unit with a number.
 @mixin mq($size) {
-  $breakpoint: map.get($breakpoints, $size);
+  $breakpoint: null;
+
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map.get($breakpoints, $size);
+  } @else if meta.type-of($size) == "number" {
+    @if (not math.is-unitless($size)) {
+      $breakpoint: $size;
+    } @else {
+      @error 'Number #{$size} has no unit.';
+    }
+  } @else {
+    @error '#{$size} is not in the map';
+  }
 
   @media screen and (min-width: $breakpoint) {
     @content;
