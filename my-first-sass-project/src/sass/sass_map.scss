@@ -10,6 +10,24 @@ $colors: (
   "special": orange,
 );
 
+$color-v2: (
+  "primary": (
+    "light": lightblue,
+    "normal": blue,
+    "dark": darkblue,
+  ),
+  "secondary": (
+    "light": pink,
+    "normal": red,
+    "dark": firebrick,
+  ),
+  "backup": (
+    "light": rgb(231, 199, 95),
+    "normal": yellow,
+    "dark": rgba(139, 139, 20, 0.178),
+  ),
+);
+
 $font-size-map: (
   "large": 48px,
   "normal": 16px,
@@ -36,4 +54,9 @@ body {
 
 .example {
   color: clr("accent");
+}
+
+// Example of nested map
+.exmaple-2 {
+  color: map.get($color-v2, "backup", "light");
 }
