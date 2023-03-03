@@ -29,6 +29,20 @@ $color-v2: (
   //"accent": orange,
 );
 
+$colors-v3: (
+  primary: (
+    light: lightblue,
+    normal: blue,
+    dark: darkblue,
+  ),
+  secondary: (
+    light: pink,
+    normal: red,
+    dark: firebrick,
+  ),
+  accent: orange,
+);
+
 $font-size-map: (
   "large": 48px,
   "normal": 16px,
@@ -93,4 +107,22 @@ body {
       color: $shade-value;
     }
   }
+}
+
+// has key and type of example
+@function clr-v3($color...) {
+  @if map.has-key($colors-v3, $color...) and
+    meta.type-of(map.get($colors-v3, $color...)) ==
+    "color"
+  {
+    @return map.get($colors-v3, $color...);
+  } @else {
+    @error '#{$color} dont have color value!';
+  }
+}
+
+.test-v3 {
+  font-size: 2rem;
+  color: clr-v3(primary, dadrk);
+  background-color: clr-v3(accent);
 }
