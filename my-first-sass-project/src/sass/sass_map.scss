@@ -26,7 +26,7 @@ $color-v2: (
     "normal": yellow,
     "dark": rgba(139, 139, 20, 0.178),
   ),
-  "accent": orange,
+  //"accent": orange,
 );
 
 $font-size-map: (
@@ -50,8 +50,8 @@ $font-sizes: (
 }
 
 // Handle irregular map
-@function clr($color...) {
-  $output-color: map.get($color-v2, $color...);
+@function clr($shade-value...) {
+  $output-color: map.get($color-v2, $shade-value...);
   @if ($output-color != null) {
     @return $output-color;
   } @else {
@@ -68,11 +68,29 @@ body {
   font-size: map.get($font-size-map, "small");
 }
 
-.example {
-  color: clr("accent");
-}
+// .example {
+//   //color: clr("accent");
+// }
 
 // Example of nested map
 .exmaple-2 {
   color: clr("backup", "light");
+}
+
+// Use map to loop to create utitilty class
+@each $color-name, $shade-map in $color-v2 {
+  //@debug color-name is $color-name;
+  //@debug shade-map is $shade-map;
+
+  @each $shade-name, $shade-value in $shade-map {
+    //@debug shade is $shade, color is $color;
+
+    .clr-#{$color-name}-#{shade} {
+      color: $shade-value;
+    }
+
+    .bg-#{$color-name}-#{shade} {
+      color: $shade-value;
+    }
+  }
 }
