@@ -26,6 +26,7 @@ $color-v2: (
     "normal": yellow,
     "dark": rgba(139, 139, 20, 0.178),
   ),
+  "accent": orange,
 );
 
 $font-size-map: (
@@ -34,8 +35,9 @@ $font-size-map: (
   "small": 11px,
 );
 
-@function clr($color) {
-  $output-color: map.get($colors, $color);
+// Handle irregular map
+@function clr($color...) {
+  $output-color: map.get($color-v2, $color...);
   @if ($output-color != null) {
     @return $output-color;
   } @else {
@@ -58,5 +60,5 @@ body {
 
 // Example of nested map
 .exmaple-2 {
-  color: map.get($color-v2, "backup", "light");
+  color: clr("backup", "light");
 }
