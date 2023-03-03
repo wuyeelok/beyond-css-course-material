@@ -35,6 +35,20 @@ $font-size-map: (
   "small": 11px,
 );
 
+$font-sizes: (
+  "400": 1.125rem,
+  "500": 1.25rem,
+  "600": 1.525rem,
+  "700": 2.25rem,
+  "800": 2.5rem,
+);
+
+@each $name, $size in $font-sizes {
+  .fs-#{$name} {
+    font-size: $size;
+  }
+}
+
 // Handle irregular map
 @function clr($color...) {
   $output-color: map.get($color-v2, $color...);
