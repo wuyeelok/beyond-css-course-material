@@ -47,7 +47,7 @@
     "t-shirts:start": "npm-run-all t-shirts:copy --parallel t-shirts:watch t-shirts:serve",
     "t-shirts:build": "npm-run-all t-shirts:copy:* t-shirts:build:* t-shirts:postbuild",
     "t-shirts:postbuild": "postcss ./t-shirts/public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "my-module-architect:local-server": "browser-sync start -s ./my-module-architect/public -f ./my-module-architect/public --port 12289"
+    "my-module-architect:local-server": "browser-sync ./my-module-architect/public -w --port 12289"
   },
   "repository": {
     "type": "git",
