@@ -48,7 +48,8 @@
     "t-shirts:build": "npm-run-all t-shirts:copy:* t-shirts:build:* t-shirts:postbuild",
     "t-shirts:postbuild": "postcss ./t-shirts/public/css/*.css -u autoprefixer cssnano -r --no-map",
     "my-module-architect:local-server": "browser-sync ./my-module-architect/public -w --port 12289",
-    "my-module-architect:copy:html": "copyfiles -u 2 ./my-module-architect/source/*.html ./my-module-architect/public"
+    "my-module-architect:copy:html": "copyfiles -u 2 ./my-module-architect/source/*.html ./my-module-architect/public",
+    "my-module-architect:copy:js": "copyfiles -u 2 ./my-module-architect/source/js/**/* ./my-module-architect/public"
   },
   "repository": {
     "type": "git",
