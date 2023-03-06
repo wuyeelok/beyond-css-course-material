@@ -54,7 +54,8 @@
     "my-module-architect:watch:html": "onchange ./my-module-architect/source/*.html -- npm run my-module-architect:copy:html",
     "my-module-architect:watch:js": "onchange ./my-module-architect/source/js/**/* -- npm run my-module-architect:copy:js",
     "my-module-architect:watch:sass": "sass --watch ./my-module-architect/source/sass:./my-module-architect/public/css",
-    "my-module-architect:watch": "npm-run-all --parallel my-module-architect:watch:*"
+    "my-module-architect:watch": "npm-run-all --parallel my-module-architect:watch:*",
+    "my-module-architect:start": "npm-run-all my-module-architect:copy --parallel my-module-architect:watch my-module-architect:local-server"
   },
   "repository": {
     "type": "git",
