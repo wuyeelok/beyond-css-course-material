@@ -1,5 +1,5 @@
 // Using * to avoid namespace
-@use "./variables/colors" as *;
+@use "./variables/var" as *;
 @use "./old_site/contianer";
 // default namespace is file name
 @use "./mixins/mixins";
@@ -7,6 +7,7 @@
 h4 {
   background-color: $red;
   color: $blue;
+  font-size: $fs-600;
 }
 
 .card {
