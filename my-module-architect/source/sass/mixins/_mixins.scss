@@ -1,0 +1,9 @@
+$small: 40em;
+$medium: 50em;
+$large: 60em;
+
+@mixin media-query($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

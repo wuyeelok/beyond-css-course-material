@@ -1,10 +1,18 @@
-@use "./variables/colors";
-@use "./variables/colors" as col;
+// Using * to avoid namespace
+@use "./variables/colors" as *;
 @use "./old_site/contianer";
+// default namespace is file name
+@use "./mixins/mixins";
 
-// Use variable from partial colors
-// Default key is the file name or can use as 'XXX' to call
 h4 {
-  background-color: colors.$red;
-  color: col.$blue;
+  background-color: $red;
+  color: $blue;
+}
+
+.card {
+  font-size: 12px;
+
+  @include mixins.media-query(mixins.$medium) {
+    font-size: 18px;
+  }
 }
