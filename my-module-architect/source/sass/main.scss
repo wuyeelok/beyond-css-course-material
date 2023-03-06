@@ -1,5 +1,5 @@
 // Using * to avoid namespace
-@use "./variables/var" as *;
+@use "./variables" as *;
 @use "./old_site/contianer";
 // default namespace is file name
 @use "./mixins/mixins";
