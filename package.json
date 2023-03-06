@@ -52,7 +52,8 @@
     "my-module-architect:copy:js": "copyfiles -u 2 ./my-module-architect/source/js/**/* ./my-module-architect/public",
     "my-module-architect:copy": "npm-run-all --parallel my-module-architect:copy:*",
     "my-module-architect:watch:html": "onchange ./my-module-architect/source/*.html -- npm run my-module-architect:copy:html",
-    "my-module-architect:watch:js": "onchange ./my-module-architect/source/js/**/* -- npm run my-module-architect:copy:js"
+    "my-module-architect:watch:js": "onchange ./my-module-architect/source/js/**/* -- npm run my-module-architect:copy:js",
+    "my-module-architect:watch:sass": "sass --watch ./my-module-architect/source/sass:./my-module-architect/public/css"
   },
   "repository": {
     "type": "git",
