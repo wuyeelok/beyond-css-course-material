@@ -1,0 +1,9 @@
+@use "./variables/colors";
+@use "./variables/colors" as col;
+
+// Use variable from partial colors
+// Default key is the file name or can use as 'XXX' to call
+h4 {
+  background-color: colors.$red;
+  color: col.$blue;
+}
