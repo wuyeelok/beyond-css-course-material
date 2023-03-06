@@ -50,7 +50,8 @@
     "my-module-architect:local-server": "browser-sync ./my-module-architect/public -w --port 12289",
     "my-module-architect:copy:html": "copyfiles -u 2 ./my-module-architect/source/*.html ./my-module-architect/public",
     "my-module-architect:copy:js": "copyfiles -u 2 ./my-module-architect/source/js/**/* ./my-module-architect/public",
-    "my-module-architect:copy": "npm-run-all --parallel my-module-architect:copy:*"
+    "my-module-architect:copy": "npm-run-all --parallel my-module-architect:copy:*",
+    "my-module-architect:watch:html": "onchange ./my-module-architect/source/*.html -- npm run my-module-architect:copy:html"
   },
   "repository": {
     "type": "git",
