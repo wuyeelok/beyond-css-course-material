@@ -1,6 +1,8 @@
 @use "abstracts/colors";
 @use "abstracts/font-sizes";
 
+// Challege #1
 .card {
-  
+  font-size: font-sizes.$fs-400;
+  color: colors.$clr-primary;
 }
