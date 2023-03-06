@@ -1,12 +1,13 @@
-@use "abstracts/colors";
-@use "abstracts/font-sizes";
-@use "./abstracts/mixins" as m;
+// Challege #3
+@use "abstracts/colors" as *;
+@use "abstracts/font-sizes" as *;
+@use "./abstracts/mixins" as *;
 
 .card {
   // Challege #1
-  font-size: font-sizes.$fs-400;
-  color: colors.$clr-primary;
+  font-size: $fs-400;
+  color: $clr-primary;
 
   // Challege #2
-  @include m.decorative-corner(colors.$clr-secondary);
+  @include decorative-corner($clr-secondary);
 }
